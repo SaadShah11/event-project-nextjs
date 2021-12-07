@@ -4,9 +4,9 @@ import classes from "./event-list.module.css"
 export default function EventList(props) {
     const {items} = props;//object destructuring
 
-    return <ul className={classes.list}>
-        {items.map(event => <EventItem key={event.id} id={event.id}  title={event.title} title={event.title}
+    return (<ul className={classes.list}>
+        {items.map(event => <EventItem key={event.id} id={event.id} title={event.title}
             location={event.location} date={event.date} image={event.image}/>)}
-    </ul>
+    </ul>);
 }
 
